@@ -1,0 +1,1146 @@
+
+----------------------------------------------------------------------------------------
+Welcome to xGov portal!
+First please input address to algod node to connect to: https://node.testnet.algoexplorerapi.io
+Enter algod token: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Please input address to indexer node to connect to: https://algoindexer.testnet.algoexplorerapi.io/
+Enter indexer token: 
+
+----------------------------------------------------------------------------------------
+Please enter path to .txt file with your wallet's mnemonic. (THIS IS FOR TEST PURPOSES ONLY!): a.txt
+Welcome user: AOJ2...76IA
+
+----------------------------------------------------------------------------------------
+Your options are:
+	1) Switch user
+	2) Create new xGov platform
+	3) Connect to existing xGov platform
+	4) Exit xGov portal
+Please enter number of the option you would like to choose: 2
+
+----------------------------------------------------------------------------------------
+Please enter the following parameters of the xGov platform you want to create:
+Commitment limit [microAlgo*round]: 10_000_000
+Freeze duration [round]: 25
+Locking duration [round]: 40
+Clawback percentage [%]: 3
+Pass rewards [microAlgo]: 1_000_000
+
+	Tx ID: IRDXLYCX7ZPBMPOGZV33O2N5ICTQLKQGGAXTEPIGNDOQ466VJ3VA
+	Tx ID: UUIF3C3MEAVIW5T35YVWRRDXK6RO7SQOXMVX3IQEB6C2GWYIOOIQ
+
+Created xGov platform with app ID: 119987642
+
+----------------------------------------------------------------------------------------
+You are managing contract with ID 119987642 and following parameters:
+	Commitment limit: 10000000 [microAlgo*round]
+	Freeze duration: 25 [round]
+	Locking duration: 40 [round]
+	Clawback percentage: 3 [%]
+	Pass rewards: 1000000 [microAlgo]
+
+	IDs of all proposals under the xGov platform: []
+
+Your options are:
+	1) Get a proposal's state
+	2) Ratify a proposal's outcome
+	3) Go to the top menu
+Please enter number of the option you would like to choose: 3
+
+----------------------------------------------------------------------------------------
+Your options are:
+	1) Switch user
+	2) Create new xGov platform
+	3) Connect to existing xGov platform
+	4) Exit xGov portal
+Please enter number of the option you would like to choose: 1
+
+----------------------------------------------------------------------------------------
+Please enter path to .txt file with your wallet's mnemonic. (THIS IS FOR TEST PURPOSES ONLY!): b.txt
+Welcome user: QZC5...NNU4
+
+----------------------------------------------------------------------------------------
+Your options are:
+	1) Switch user
+	2) Create new xGov platform
+	3) Connect to existing xGov platform
+	4) Exit xGov portal
+Please enter number of the option you would like to choose: 3
+
+----------------------------------------------------------------------------------------
+Please enter the app ID of the xGov platform you are trying to connect to: 119987642
+	Creating xGov escrow account for user QZC5...NNU4 ...
+	Tx ID: KBSYPBR5Z6FBG4ZVF3V2GP7YF5K4NPB3B5QWQZGSE2VFXL6WP4OQ
+	Tx ID: Q47E6JJHLLKXB7UY2L7AVZ74F5KUP3J6TVTBXWQMJ6X4SAOH6DLA
+	Escrow with App ID: 119987844 was created for user QZC5N23CAHFT7OA653KNV2O4UNJZSJRMNJ5XIRRSDPV5AOXTKUO27GNNU4
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 0 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 0 [microAlgo]
+	Number of supporting proposals: 0
+
+	Created proposals with IDs: []
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 2
+
+----------------------------------------------------------------------------------------
+To create a new proposal please select:
+	1) if you want to write a proposal
+	2) if you want to enter SHA256 of already written proposal
+Please enter number of the option you would like to choose: 1
+
+Your proposal: This is a super awesome proposal.
+
+Creating a new proposal ...
+	Tx ID: LCIKGF36YTHSXYE3CYWUIIFH3KRTLUIUVBPMNTOIVURGNJ4GZRWQ
+	Tx ID: A2YG5FMCJWOFNT2RAZEXRXG6244NVQFTDIK5R766TYBRCBFOUPFA
+	Return value: 119988013
+
+	Created proposal with ID: 119988013
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 0 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 0 [microAlgo]
+	Number of supporting proposals: 0
+
+	Created proposals with IDs: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 6
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal you would like to start supporting: 119988013
+	Tx ID: VWBKKZ5IZB7WSUNRWILRKP2DC4MLXHAZXQWN7WRSWNMFLWV6J4GQ
+	Tx ID: 3LMTE6AUFZLFZ34MO7WBWFWIT6WHNT2QMFMWISRRYJODEE3SQRJA
+	Successfully started supporting proposal with ID: 119988013
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 285500 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 0 [microAlgo]
+	Number of supporting proposals: 1
+		Supporting proposal ID 119988013 with:
+			Time-weighted stake: 0 [microAlgo*round]
+			Stake: 0 [microAlgo*round]
+			Local state last updated at round: 25225701
+
+	Created proposals with IDs: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 4
+
+----------------------------------------------------------------------------------------
+Please enter the amount [microAlgo] you would like to deposit to your xGov account: 200_000
+	Tx ID: TLEN7OQ4P4TTRMZ6FVSXVOQCR2D3N6THMVO5OVKWJLVLQ6SLMGCA
+	Tx ID: LROW5EABUU5HW2EHSUAF57S5IFHMO4WHUNMYPCTV2DZZCRCNZT5Q
+	Successfully added funds to xGov escrow
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 485500 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 200000 [microAlgo]
+	Number of supporting proposals: 1
+		Supporting proposal ID 119988013 with:
+			Time-weighted stake: 0 [microAlgo*round]
+			Stake: 0 [microAlgo*round]
+			Local state last updated at round: 25225701
+
+	Created proposals with IDs: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 7
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal you would like to give additional support to: 119988013
+You can give at most 200000 [microAlgo] to the support of the proposal
+Please enter the amount in [microAlgo] you would like to give to the support of the proposal: 49_000
+	Tx ID: HHIPRY7YW6JA77XGFBICNW7CZYS3PVHD2FFGV22UKHNL2RKYIEFQ
+	Successfully add support to the proposal
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 485500 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 151000 [microAlgo]
+	Number of supporting proposals: 1
+		Supporting proposal ID 119988013 with:
+			Time-weighted stake: 0 [microAlgo*round]
+			Stake: 49000 [microAlgo*round]
+			Local state last updated at round: 25225729
+
+	Created proposals with IDs: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 1
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal whose state you would like get: 119988013
+	Tx ID: DPGR3PK7OFWSHHQ2MNSM4IPH3NNAWRE5TNA5Y6OT3AMTFL2HNYKQ
+State of the proposal at round 25225741:
+Proposal has not yet reached the commitment limit of 10000000 [microAlgo*round]
+	Time-weighted stake: 588000 [microAlgo*round]
+	Stake: 49000 [microAlgo]
+	Number of supporters: 1
+	Proposer: QZC5N23CAHFT7OA653KNV2O4UNJZSJRMNJ5XIRRSDPV5AOXTKUO27GNNU4
+	Proposal hash (SHA256): 0x0bec04282948b77d87d09d4650e5217025a1f706fe81e6adcce31588edb319ea
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 485500 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 151000 [microAlgo]
+	Number of supporting proposals: 1
+		Supporting proposal ID 119988013 with:
+			Time-weighted stake: 0 [microAlgo*round]
+			Stake: 49000 [microAlgo*round]
+			Local state last updated at round: 25225729
+
+	Created proposals with IDs: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 1
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal whose state you would like get: 119988013
+	Tx ID: I4HJKLSDGOZGLP2ZVEOIIJZWDDKCF2XLT6OOVRBM5QFFD7RPRXWQ
+State of the proposal at round 25225750:
+Proposal has not yet reached the commitment limit of 10000000 [microAlgo*round]
+	Time-weighted stake: 980000 [microAlgo*round]
+	Stake: 49000 [microAlgo]
+	Number of supporters: 1
+	Proposer: QZC5N23CAHFT7OA653KNV2O4UNJZSJRMNJ5XIRRSDPV5AOXTKUO27GNNU4
+	Proposal hash (SHA256): 0x0bec04282948b77d87d09d4650e5217025a1f706fe81e6adcce31588edb319ea
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 485500 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 151000 [microAlgo]
+	Number of supporting proposals: 1
+		Supporting proposal ID 119988013 with:
+			Time-weighted stake: 0 [microAlgo*round]
+			Stake: 49000 [microAlgo*round]
+			Local state last updated at round: 25225729
+
+	Created proposals with IDs: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 8
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal you would like to stop supporting: 119988013
+	Tx ID: K7V7MZLL4WWLSYKBAKMXZIS7PXUTPS7GPE7I2MGAF76AW3AGJQSQ
+	Successfully stopped supporting proposal with ID: 119988013
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 485500 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 385500 [microAlgo]
+	Number of supporting proposals: 0
+
+	Created proposals with IDs: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 12
+
+----------------------------------------------------------------------------------------
+Your options are:
+	1) Switch user
+	2) Create new xGov platform
+	3) Connect to existing xGov platform
+	4) Exit xGov portal
+Please enter number of the option you would like to choose: 1
+
+----------------------------------------------------------------------------------------
+Please enter path to .txt file with your wallet's mnemonic. (THIS IS FOR TEST PURPOSES ONLY!): c.txt
+Welcome user: ZPJV...QBJU
+
+----------------------------------------------------------------------------------------
+Your options are:
+	1) Switch user
+	2) Create new xGov platform
+	3) Connect to existing xGov platform
+	4) Exit xGov portal
+Please enter number of the option you would like to choose: 3
+
+----------------------------------------------------------------------------------------
+Please enter the app ID of the xGov platform you are trying to connect to: 119987642
+	Creating xGov escrow account for user ZPJV...QBJU ...
+	Tx ID: QG23JFUYKEJLZ3QRSWV4PNELWFP6WILFXFAJV76PGOLXAXJVE73Q
+	Tx ID: 7MXPHJKWL32OVFCEEC3WWXE3WQWYWZIHO2CXHN5RP3WRIYZGGQ3A
+	Escrow with App ID: 119988767 was created for user ZPJVI7AJVQUGY6BPXNFOR24JQUV3GZ57AJLKHQPI47ZXB4KPLXDIQKQBJU
+
+----------------------------------------------------------------------------------------
+ZPJV...QBJU state in xGov:
+	Total balance in xGov: 0 [microAlgo]
+	Escrow account: M3VB24L4QEOZWNYDS3KMTHMPHURVSFXIP4NJIMVZ4C6WFH3PHOSWAIA62I
+	Escrow account is Offline
+	Uncommitted stake: 0 [microAlgo]
+	Number of supporting proposals: 0
+
+	Created proposals with IDs: []
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 6
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal you would like to start supporting: 119988013
+	Tx ID: TY56OEHNGLAXZQMNQPVAFDBF435R2SKB3B65EPKUXB7E5E4CICPA
+	Tx ID: VNT3DV3FWQW3OUJ76N4LTBDXCIPQUE5FJVX5TU7EDNRMDSL5YCQQ
+	Successfully started supporting proposal with ID: 119988013
+
+----------------------------------------------------------------------------------------
+ZPJV...QBJU state in xGov:
+	Total balance in xGov: 285500 [microAlgo]
+	Escrow account: M3VB24L4QEOZWNYDS3KMTHMPHURVSFXIP4NJIMVZ4C6WFH3PHOSWAIA62I
+	Escrow account is Offline
+	Uncommitted stake: 0 [microAlgo]
+	Number of supporting proposals: 1
+		Supporting proposal ID 119988013 with:
+			Time-weighted stake: 0 [microAlgo*round]
+			Stake: 0 [microAlgo*round]
+			Local state last updated at round: 25225791
+
+	Created proposals with IDs: []
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 4
+
+----------------------------------------------------------------------------------------
+Please enter the amount [microAlgo] you would like to deposit to your xGov account: 200_000
+	Tx ID: O2VPAWPTBJKD5532LSEZJI4BUHTXELSE7RDOPE4UR47A4Q2GRGDA
+	Tx ID: 34KWC2E7F2OICX2FAUQVDVNWEQPXHDJT7FBXAIX57T2JSWNCUOZA
+	Successfully added funds to xGov escrow
+
+----------------------------------------------------------------------------------------
+ZPJV...QBJU state in xGov:
+	Total balance in xGov: 485500 [microAlgo]
+	Escrow account: M3VB24L4QEOZWNYDS3KMTHMPHURVSFXIP4NJIMVZ4C6WFH3PHOSWAIA62I
+	Escrow account is Offline
+	Uncommitted stake: 200000 [microAlgo]
+	Number of supporting proposals: 1
+		Supporting proposal ID 119988013 with:
+			Time-weighted stake: 0 [microAlgo*round]
+			Stake: 0 [microAlgo*round]
+			Local state last updated at round: 25225791
+
+	Created proposals with IDs: []
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 7
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal you would like to give additional support to: 119988013
+You can give at most 200000 [microAlgo] to the support of the proposal
+Please enter the amount in [microAlgo] you would like to give to the support of the proposal: 11_111
+	Tx ID: BYRBZJTYVYKLG7NQ3XFVB33E3G56J6G2DAKCKULG24G4EVFZ6QXA
+	Successfully add support to the proposal
+
+----------------------------------------------------------------------------------------
+ZPJV...QBJU state in xGov:
+	Total balance in xGov: 485500 [microAlgo]
+	Escrow account: M3VB24L4QEOZWNYDS3KMTHMPHURVSFXIP4NJIMVZ4C6WFH3PHOSWAIA62I
+	Escrow account is Offline
+	Uncommitted stake: 188889 [microAlgo]
+	Number of supporting proposals: 1
+		Supporting proposal ID 119988013 with:
+			Time-weighted stake: 0 [microAlgo*round]
+			Stake: 11111 [microAlgo*round]
+			Local state last updated at round: 25225809
+
+	Created proposals with IDs: []
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 1
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal whose state you would like get: 119988013
+	Tx ID: OSPLJ5HD72IONUG32EGQYS2LGSO5UOT2XLC56W3DXEEK64Y5HGFA
+State of the proposal at round 25225815:
+Proposal has not yet reached the commitment limit of 10000000 [microAlgo*round]
+	Time-weighted stake: 66666 [microAlgo*round]
+	Stake: 11111 [microAlgo]
+	Number of supporters: 1
+	Proposer: QZC5N23CAHFT7OA653KNV2O4UNJZSJRMNJ5XIRRSDPV5AOXTKUO27GNNU4
+	Proposal hash (SHA256): 0x0bec04282948b77d87d09d4650e5217025a1f706fe81e6adcce31588edb319ea
+
+----------------------------------------------------------------------------------------
+ZPJV...QBJU state in xGov:
+	Total balance in xGov: 485500 [microAlgo]
+	Escrow account: M3VB24L4QEOZWNYDS3KMTHMPHURVSFXIP4NJIMVZ4C6WFH3PHOSWAIA62I
+	Escrow account is Offline
+	Uncommitted stake: 188889 [microAlgo]
+	Number of supporting proposals: 1
+		Supporting proposal ID 119988013 with:
+			Time-weighted stake: 0 [microAlgo*round]
+			Stake: 11111 [microAlgo*round]
+			Local state last updated at round: 25225809
+
+	Created proposals with IDs: []
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 12
+
+----------------------------------------------------------------------------------------
+Your options are:
+	1) Switch user
+	2) Create new xGov platform
+	3) Connect to existing xGov platform
+	4) Exit xGov portal
+Please enter number of the option you would like to choose: 1
+
+----------------------------------------------------------------------------------------
+Please enter path to .txt file with your wallet's mnemonic. (THIS IS FOR TEST PURPOSES ONLY!): b.txt
+Welcome user: QZC5...NNU4
+
+----------------------------------------------------------------------------------------
+Your options are:
+	1) Switch user
+	2) Create new xGov platform
+	3) Connect to existing xGov platform
+	4) Exit xGov portal
+Please enter number of the option you would like to choose: 3
+
+----------------------------------------------------------------------------------------
+Please enter the app ID of the xGov platform you are trying to connect to: 119987642
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 485500 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 385500 [microAlgo]
+	Number of supporting proposals: 0
+
+	Created proposals with IDs: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 3
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal you would like to update: 119988013
+To update the proposal please select:
+	1) if you want to write the update to the proposal
+	2) if you want to enter SHA256 of already updated proposal
+Please enter number of the option you would like to choose: 1
+
+Your updated proposal: This is an update to the super awesome proposal.
+
+Updating the proposal with ID 119988013... 
+	Tx ID: YJGMDBZQ5H2JQE6FZ3NHBCJC5CFK4H367MUSYIZHGVJ6SWHPESLA
+
+	Updated the proposal with ID:  119988013
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 485500 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 385500 [microAlgo]
+	Number of supporting proposals: 0
+
+	Created proposals with IDs: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 1
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal whose state you would like get: 119988013
+	Tx ID: DUKCZWG3JNLAVAHWANDPW7E44I2SXY6TT2Q6W4GLTCKPXVVLAROQ
+State of the proposal at round 25225849:
+Proposal has not yet reached the commitment limit of 10000000 [microAlgo*round]
+Proposal has recently been updated and is in the review phase that will last until round 25225861
+	Time-weighted stake: 299997 [microAlgo*round]
+	Stake: 11111 [microAlgo]
+	Number of supporters: 1
+	Proposer: QZC5N23CAHFT7OA653KNV2O4UNJZSJRMNJ5XIRRSDPV5AOXTKUO27GNNU4
+	Proposal hash (SHA256): 0x1ec7a7d8ee542a988a8dace997df223abc1fb18c0d3867f21199eb1bc92cb758
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 485500 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 385500 [microAlgo]
+	Number of supporting proposals: 0
+
+	Created proposals with IDs: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 1
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal whose state you would like get: 119988013
+	Tx ID: EXJGPBJP6FKXYJZ6B55CFG7XNTCKGY3HCZPV2GNCF7UNSGQ3H3PA
+State of the proposal at round 25225861:
+Proposal has not yet reached the commitment limit of 10000000 [microAlgo*round]
+	Time-weighted stake: 577772 [microAlgo*round]
+	Stake: 11111 [microAlgo]
+	Number of supporters: 1
+	Proposer: QZC5N23CAHFT7OA653KNV2O4UNJZSJRMNJ5XIRRSDPV5AOXTKUO27GNNU4
+	Proposal hash (SHA256): 0x1ec7a7d8ee542a988a8dace997df223abc1fb18c0d3867f21199eb1bc92cb758
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 485500 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 385500 [microAlgo]
+	Number of supporting proposals: 0
+
+	Created proposals with IDs: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 6
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal you would like to start supporting: 119988013
+	Tx ID: KSM6EQ5I56UPOQP7G5CPAZHHVN3U5E3H6W3AXIXS26Q7QLY4KXJA
+	Tx ID: EXFKIKQT3S3XSHC26SAPJ3U4N752WX4EDNXJ2MF3KMVZ6BJUYVAA
+	Successfully started supporting proposal with ID: 119988013
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 671000 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 385500 [microAlgo]
+	Number of supporting proposals: 1
+		Supporting proposal ID 119988013 with:
+			Time-weighted stake: 0 [microAlgo*round]
+			Stake: 0 [microAlgo*round]
+			Local state last updated at round: 25225871
+
+	Created proposals with IDs: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 7
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal you would like to give additional support to: 119988013
+You can give at most 385500 [microAlgo] to the support of the proposal
+Please enter the amount in [microAlgo] you would like to give to the support of the proposal: 380_000
+	Tx ID: OLTUJHV3ERD45QJLOQS62JUYQY7UG4RLT5Z4GFHJSQNXKHHEIYAA
+	Successfully add support to the proposal
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 671000 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 5500 [microAlgo]
+	Number of supporting proposals: 1
+		Supporting proposal ID 119988013 with:
+			Time-weighted stake: 0 [microAlgo*round]
+			Stake: 380000 [microAlgo*round]
+			Local state last updated at round: 25225880
+
+	Created proposals with IDs: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 12
+
+----------------------------------------------------------------------------------------
+Your options are:
+	1) Switch user
+	2) Create new xGov platform
+	3) Connect to existing xGov platform
+	4) Exit xGov portal
+Please enter number of the option you would like to choose: 1
+
+----------------------------------------------------------------------------------------
+Please enter path to .txt file with your wallet's mnemonic. (THIS IS FOR TEST PURPOSES ONLY!): a.txt
+Welcome user: AOJ2...76IA
+
+----------------------------------------------------------------------------------------
+Your options are:
+	1) Switch user
+	2) Create new xGov platform
+	3) Connect to existing xGov platform
+	4) Exit xGov portal
+Please enter number of the option you would like to choose: 3
+
+----------------------------------------------------------------------------------------
+Please enter the app ID of the xGov platform you are trying to connect to: 119987642
+Welcome AOJ2...76IA, xGov platform creator!
+
+----------------------------------------------------------------------------------------
+You are managing contract with ID 119987642 and following parameters:
+	Commitment limit: 10000000 [microAlgo*round]
+	Freeze duration: 25 [round]
+	Locking duration: 40 [round]
+	Clawback percentage: 3 [%]
+	Pass rewards: 1000000 [microAlgo]
+
+	IDs of all proposals under the xGov platform: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Ratify a proposal's outcome
+	3) Go to the top menu
+Please enter number of the option you would like to choose: 1
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal whose state you would like get: 119988013
+	Tx ID: W4VCYNRR274Q4PTBR3WCL5YHKF7EZAON42FBL3LI3CVUU2RLUYAQ
+State of the proposal at round 25225892:
+Proposal has not yet reached the commitment limit of 10000000 [microAlgo*round]
+	Time-weighted stake: 5482213 [microAlgo*round]
+	Stake: 391111 [microAlgo]
+	Number of supporters: 2
+	Proposer: QZC5N23CAHFT7OA653KNV2O4UNJZSJRMNJ5XIRRSDPV5AOXTKUO27GNNU4
+	Proposal hash (SHA256): 0x1ec7a7d8ee542a988a8dace997df223abc1fb18c0d3867f21199eb1bc92cb758
+
+----------------------------------------------------------------------------------------
+You are managing contract with ID 119987642 and following parameters:
+	Commitment limit: 10000000 [microAlgo*round]
+	Freeze duration: 25 [round]
+	Locking duration: 40 [round]
+	Clawback percentage: 3 [%]
+	Pass rewards: 1000000 [microAlgo]
+
+	IDs of all proposals under the xGov platform: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Ratify a proposal's outcome
+	3) Go to the top menu
+Please enter number of the option you would like to choose: 1
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal whose state you would like get: 119988013
+	Tx ID: THDRILSUQVYCOFORHL7QCPR4VKVMERRQ2EEA5TZAFCEUJIHFBJEQ
+State of the proposal at round 25225909:
+Proposal has reached the commitment limit!
+	Time-weighted stake: 11739989 [microAlgo*round]
+	Stake: 391111 [microAlgo]
+	Number of supporters: 2
+	Proposer: QZC5N23CAHFT7OA653KNV2O4UNJZSJRMNJ5XIRRSDPV5AOXTKUO27GNNU4
+	Proposal hash (SHA256): 0x1ec7a7d8ee542a988a8dace997df223abc1fb18c0d3867f21199eb1bc92cb758
+
+----------------------------------------------------------------------------------------
+You are managing contract with ID 119987642 and following parameters:
+	Commitment limit: 10000000 [microAlgo*round]
+	Freeze duration: 25 [round]
+	Locking duration: 40 [round]
+	Clawback percentage: 3 [%]
+	Pass rewards: 1000000 [microAlgo]
+
+	IDs of all proposals under the xGov platform: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Ratify a proposal's outcome
+	3) Go to the top menu
+Please enter number of the option you would like to choose: 2
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal whose outcome you would like to ratify: 119988013
+Possible outcomes of the proposal are: 
+0) Rejected
+1) Passed
+2) Vetoed
+Please enter number of the outcome you would like to choose: 1
+
+Can't yet ratify the proposal as passed because the cool down period hasn't passed yet
+Cool down will finish at round: 25225948
+
+----------------------------------------------------------------------------------------
+You are managing contract with ID 119987642 and following parameters:
+	Commitment limit: 10000000 [microAlgo*round]
+	Freeze duration: 25 [round]
+	Locking duration: 40 [round]
+	Clawback percentage: 3 [%]
+	Pass rewards: 1000000 [microAlgo]
+
+	IDs of all proposals under the xGov platform: [119988013]
+
+Your options are:
+	1) Get a proposal's state
+	2) Ratify a proposal's outcome
+	3) Go to the top menu
+Please enter number of the option you would like to choose: 2
+
+----------------------------------------------------------------------------------------
+Please enter the ID of the proposal whose outcome you would like to ratify: 119988013
+Possible outcomes of the proposal are: 
+0) Rejected
+1) Passed
+2) Vetoed
+Please enter number of the outcome you would like to choose: 1
+
+	Starting to ratify the outcome to each supporter ...
+
+	Tx ID: Z2BMK3EDL35BOVGV2F437NL7QPANSRLCNJHEGSS6PY5DWSZJJPDQ
+	Manager has sufficient funds for payout of rewards
+	Escrow id: 119987844, owner: QZC5N23CAHFT7OA653KNV2O4UNJZSJRMNJ5XIRRSDPV5AOXTKUO27GNNU4
+	Tx ID: Q6DL7PKC5NC7ZDLDEXODX7OL5UPYTDOTFAV4MPMGEFW43QRPJQUQ
+	Escrow id: 119988767, owner: ZPJVI7AJVQUGY6BPXNFOR24JQUV3GZ57AJLKHQPI47ZXB4KPLXDIQKQBJU
+	Tx ID: GV554PKLD3ZYGV4IILUYIOVR7BHJB2N7IK73EFL7J5WDZK4XCFQQ
+
+	Finished ratifying accounts
+
+	Tx ID: 5MIP7LEJ2AYU5KCXQKOITOW7NRH55T54RCZQZM5W2LZHOBHMDV5Q
+	Deleted proposal with ID: 119988013
+
+Successfully ratified the proposal
+
+----------------------------------------------------------------------------------------
+You are managing contract with ID 119987642 and following parameters:
+	Commitment limit: 10000000 [microAlgo*round]
+	Freeze duration: 25 [round]
+	Locking duration: 40 [round]
+	Clawback percentage: 3 [%]
+	Pass rewards: 1000000 [microAlgo]
+
+	IDs of all proposals under the xGov platform: []
+
+Your options are:
+	1) Get a proposal's state
+	2) Ratify a proposal's outcome
+	3) Go to the top menu
+Please enter number of the option you would like to choose: 3
+
+----------------------------------------------------------------------------------------
+Your options are:
+	1) Switch user
+	2) Create new xGov platform
+	3) Connect to existing xGov platform
+	4) Exit xGov portal
+Please enter number of the option you would like to choose: 1
+
+----------------------------------------------------------------------------------------
+Please enter path to .txt file with your wallet's mnemonic. (THIS IS FOR TEST PURPOSES ONLY!): b.txt
+Welcome user: QZC5...NNU4
+
+----------------------------------------------------------------------------------------
+Your options are:
+	1) Switch user
+	2) Create new xGov platform
+	3) Connect to existing xGov platform
+	4) Exit xGov portal
+Please enter number of the option you would like to choose: 3
+
+----------------------------------------------------------------------------------------
+Please enter the app ID of the xGov platform you are trying to connect to: 119987642
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 671000 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 571000 [microAlgo]
+	Number of supporting proposals: 0
+
+	Created proposals with IDs: []
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 5
+
+----------------------------------------------------------------------------------------
+You can withdraw at most: 571000 [microAlgo]
+Please enter the amount [microAlgo] you would like to withdraw from your xGov account: 200_000
+	Tx ID: EOFQUV6DWHQYYPUNA6T5ZLYNWSKG36355VMP2PE37PHIPKIAHSWQ
+	Successfully removed funds from xGov escrow
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 471000 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 371000 [microAlgo]
+	Number of supporting proposals: 0
+
+	Created proposals with IDs: []
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 10
+
+----------------------------------------------------------------------------------------
+Before proceeding, make sure to check: 
+	 https://github.com/algorandfoundation/governance/blob/main/af-gov1-spec.md 
+	 https://governance.algorand.foundation/ 
+
+Please enter the message according to Algorand Governance structure: "  af/gov1:j{"com":666666}"
+Please enter the Algorand Governance address [58 char]: AOJ27TKOLMAWDTUYWRTCLFWWU4XEOA3CGP7WVO6FQIHWBCGVKWSUIV76IA
+
+	Tx ID: DGTZNELUKFBHQXKZPQOBNYZBHUOL64ELC5X7SHR5MKP5WW37HZUQ
+
+	Successfully opted out of xGov
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 471000 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 371000 [microAlgo]
+	Number of supporting proposals: 0
+
+	Created proposals with IDs: []
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 11
+
+----------------------------------------------------------------------------------------
+Please enter the required information for brining account online
+Voting key: nKGprcC1A9gBa7I/VBsNJFrVZr17aA7A4SlD+sEN8ZE=
+Selection key: 15m7J1vSMfKVvbSM96z/O7vclwRAlDxVgzdU6SAq5Fc=
+State proof key: e6HqQ9uwjWlt9+ssGVtv+boUwErJDWe2hvJwGc5c2zX+HOzh+JaQ9L8ldJe2eXCoLi07MBKOUgqiO012dJuT7Q==
+Vote first round: 25226050
+Vote last round: 25236050
+Vote key dilution: 100
+
+	Tx ID: 7YO4NTNTB2F2SBGEBT2DWHG3JDL33Y6AAMRKQGV2CQ5BM6BNRGSQ
+
+	Successfully brought escrow account online
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 471000 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Online
+	Uncommitted stake: 371000 [microAlgo]
+	Number of supporting proposals: 0
+
+	Created proposals with IDs: []
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 11
+
+----------------------------------------------------------------------------------------
+
+	Tx ID: LR3JX7BZ64HJQFVHHDLVAHJ624MHPVFPFUAGLURARAIIIRF632UQ
+
+	Successfully brought escrow account offline
+
+----------------------------------------------------------------------------------------
+QZC5...NNU4 state in xGov:
+	Total balance in xGov: 471000 [microAlgo]
+	Escrow account: IAH3UBAB4T2R6IAIYOTBQZEYUNGPJD7QCWZHMB3YQPJZ2YTWN4BE2MR46U
+	Escrow account is Offline
+	Uncommitted stake: 371000 [microAlgo]
+	Number of supporting proposals: 0
+
+	Created proposals with IDs: []
+
+Your options are:
+	1) Get a proposal's state
+	2) Create new proposal
+	3) Update your existing proposal
+	4) Increase balance in xGov
+	5) Reduce balance in xGov
+	6) Start supporting a proposal
+	7) Add support to a proposal
+	8) Remove support of a proposal
+	9) Opt out of xGov
+	10) Register/vote in Algorand Governance with xGov escrow account
+	11) Change xGov escrow account online/offline status
+	12) Go to the top menu
+Please enter number of the option you would like to choose: 9
+
+----------------------------------------------------------------------------------------
+	Tx ID: JY7WU2YNP7SH4RLHQQLCT7HNINKZCGSTDWK7BEA7RAFVS4ZZVZ7A
+
+	Successfully opted out of xGov
+
+----------------------------------------------------------------------------------------
+Your options are:
+	1) Switch user
+	2) Create new xGov platform
+	3) Connect to existing xGov platform
+	4) Exit xGov portal
+Please enter number of the option you would like to choose: 4
+
+Process finished with exit code 1

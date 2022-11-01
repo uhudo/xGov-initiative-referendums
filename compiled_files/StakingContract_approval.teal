@@ -1,0 +1,527 @@
+#pragma version 7
+txn NumAppArgs
+int 0
+==
+bnz main_l10
+txna ApplicationArgs 0
+method "create_app(address,byte[32],uint64,uint64)void"
+==
+bnz main_l9
+txna ApplicationArgs 0
+method "proposal_update(address,byte[32])void"
+==
+bnz main_l8
+txna ApplicationArgs 0
+method "update_state()void"
+==
+bnz main_l7
+txna ApplicationArgs 0
+method "add_stake(uint64)void"
+==
+bnz main_l6
+err
+main_l6:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+btoi
+store 8
+load 8
+callsub addstake_5
+int 1
+return
+main_l7:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+callsub updatestate_4
+int 1
+return
+main_l8:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+store 6
+txna ApplicationArgs 2
+store 7
+load 6
+load 7
+callsub proposalupdate_3
+int 1
+return
+main_l9:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+==
+&&
+assert
+txna ApplicationArgs 1
+store 2
+txna ApplicationArgs 2
+store 3
+txna ApplicationArgs 3
+btoi
+store 4
+txna ApplicationArgs 4
+btoi
+store 5
+load 2
+load 3
+load 4
+load 5
+callsub createapp_2
+int 1
+return
+main_l10:
+txn OnCompletion
+int OptIn
+==
+bnz main_l20
+txn OnCompletion
+int CloseOut
+==
+bnz main_l17
+txn OnCompletion
+int UpdateApplication
+==
+bnz main_l16
+txn OnCompletion
+int DeleteApplication
+==
+bnz main_l15
+err
+main_l15:
+txn ApplicationID
+int 0
+!=
+assert
+txn Sender
+global CreatorAddress
+==
+byte "FI"
+app_global_get
+int 1
+==
+&&
+byte "NS"
+app_global_get
+int 0
+==
+&&
+assert
+global CreatorAddress
+callsub closeAccountTo_1
+int 1
+return
+main_l16:
+int 0
+return
+main_l17:
+txn ApplicationID
+int 0
+!=
+assert
+callsub finished_0
+int 0
+==
+bnz main_l19
+main_l18:
+byte "NS"
+byte "NS"
+app_global_get
+int 1
+-
+app_global_put
+int 1
+return
+main_l19:
+byte "WS"
+byte "WS"
+app_global_get
+txn Sender
+byte "WS"
+app_local_get
+-
+app_global_put
+byte "S"
+byte "S"
+app_global_get
+txn Sender
+byte "S"
+app_local_get
+-
+app_global_put
+b main_l18
+main_l20:
+txn ApplicationID
+int 0
+!=
+assert
+byte "MAID"
+app_global_get
+byte "AOITP"
+app_global_get_ex
+store 1
+store 0
+callsub finished_0
+int 0
+==
+assert
+load 1
+assert
+load 0
+int 1
+==
+assert
+txn Sender
+byte "WS"
+int 0
+app_local_put
+txn Sender
+byte "S"
+int 0
+app_local_put
+txn Sender
+byte "LR"
+byte "LR"
+app_global_get
+app_local_put
+txn Sender
+global CreatorAddress
+!=
+bnz main_l22
+main_l21:
+int 1
+return
+main_l22:
+byte "NS"
+byte "NS"
+app_global_get
+int 1
++
+app_global_put
+b main_l21
+
+// finished
+finished_0:
+byte "FI"
+app_global_get
+int 1
+==
+bnz finished_0_l10
+byte "FR"
+app_global_get
+int 1
+==
+bnz finished_0_l5
+byte "WS"
+byte "WS"
+app_global_get
+global Round
+byte "LR"
+app_global_get
+-
+byte "S"
+app_global_get
+*
++
+app_global_put
+byte "LR"
+global Round
+app_global_put
+txn Sender
+byte "WS"
+txn Sender
+byte "WS"
+app_local_get
+global Round
+txn Sender
+byte "LR"
+app_local_get
+-
+txn Sender
+byte "S"
+app_local_get
+*
++
+app_local_put
+txn Sender
+byte "LR"
+global Round
+app_local_put
+byte "WS"
+app_global_get
+byte "CL"
+app_global_get
+>=
+bnz finished_0_l4
+int 0
+b finished_0_l11
+finished_0_l4:
+byte "FI"
+int 1
+app_global_put
+int 1
+b finished_0_l11
+finished_0_l5:
+txn Sender
+byte "WS"
+txn Sender
+byte "WS"
+app_local_get
+byte "LR"
+app_global_get
+txn Sender
+byte "LR"
+app_local_get
+-
+txn Sender
+byte "S"
+app_local_get
+*
++
+app_local_put
+txn Sender
+byte "LR"
+byte "LR"
+app_global_get
+app_local_put
+global Round
+byte "LR"
+app_global_get
+byte "FD"
+app_global_get
++
+>=
+bnz finished_0_l7
+int 0
+b finished_0_l11
+finished_0_l7:
+byte "FR"
+int 0
+app_global_put
+byte "WS"
+byte "WS"
+app_global_get
+global Round
+byte "LR"
+app_global_get
+-
+byte "S"
+app_global_get
+*
++
+app_global_put
+byte "LR"
+global Round
+app_global_put
+txn Sender
+byte "WS"
+txn Sender
+byte "WS"
+app_local_get
+global Round
+txn Sender
+byte "LR"
+app_local_get
+-
+txn Sender
+byte "S"
+app_local_get
+*
++
+app_local_put
+txn Sender
+byte "LR"
+global Round
+app_local_put
+byte "WS"
+app_global_get
+byte "CL"
+app_global_get
+>=
+bnz finished_0_l9
+int 0
+b finished_0_l11
+finished_0_l9:
+byte "FI"
+int 1
+app_global_put
+int 1
+b finished_0_l11
+finished_0_l10:
+int 1
+finished_0_l11:
+retsub
+
+// closeAccountTo
+closeAccountTo_1:
+store 9
+global CurrentApplicationAddress
+balance
+int 0
+!=
+bz closeAccountTo_1_l2
+itxn_begin
+int 0
+itxn_field Fee
+int pay
+itxn_field TypeEnum
+load 9
+itxn_field CloseRemainderTo
+itxn_submit
+closeAccountTo_1_l2:
+retsub
+
+// create_app
+createapp_2:
+store 13
+store 12
+store 11
+store 10
+txna Applications 1
+app_params_get AppAddress
+store 15
+store 14
+load 10
+len
+int 32
+==
+assert
+load 11
+len
+int 32
+==
+assert
+byte "P"
+load 10
+app_global_put
+byte "H"
+load 11
+app_global_put
+byte "CL"
+load 12
+app_global_put
+byte "FD"
+load 13
+app_global_put
+byte "FI"
+int 0
+app_global_put
+byte "FR"
+int 0
+app_global_put
+byte "S"
+int 0
+app_global_put
+byte "WS"
+int 0
+app_global_put
+byte "LR"
+global Round
+app_global_put
+byte "NS"
+int 0
+app_global_put
+load 15
+assert
+load 14
+txn Sender
+==
+assert
+byte "MAID"
+txna Applications 1
+app_global_put
+int 1
+return
+
+// proposal_update
+proposalupdate_3:
+store 17
+store 16
+load 16
+len
+int 32
+==
+assert
+load 17
+len
+int 32
+==
+assert
+callsub finished_0
+int 0
+==
+assert
+byte "FR"
+app_global_get
+int 0
+==
+assert
+txn Sender
+global CreatorAddress
+==
+assert
+byte "P"
+app_global_get
+load 16
+==
+assert
+byte "FR"
+int 1
+app_global_put
+byte "H"
+load 17
+app_global_put
+int 1
+return
+
+// update_state
+updatestate_4:
+callsub finished_0
+pop
+retsub
+
+// add_stake
+addstake_5:
+store 18
+callsub finished_0
+int 0
+==
+assert
+byte "S"
+byte "S"
+app_global_get
+load 18
++
+app_global_put
+txn Sender
+byte "S"
+txn Sender
+byte "S"
+app_local_get
+load 18
++
+app_local_put
+int 1
+return

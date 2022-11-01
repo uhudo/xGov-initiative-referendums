@@ -1,0 +1,1092 @@
+#pragma version 7
+txn NumAppArgs
+int 0
+==
+bnz main_l28
+txna ApplicationArgs 0
+method "create_app(uint64,uint64,uint64,uint64,uint64)void"
+==
+bnz main_l27
+txna ApplicationArgs 0
+method "new_proposal(byte[32])uint64"
+==
+bnz main_l26
+txna ApplicationArgs 0
+method "proposal_update(byte[32])void"
+==
+bnz main_l25
+txna ApplicationArgs 0
+method "ratify(uint64)void"
+==
+bnz main_l24
+txna ApplicationArgs 0
+method "start_supporting_prop()void"
+==
+bnz main_l23
+txna ApplicationArgs 0
+method "update_prop_global_state()void"
+==
+bnz main_l22
+txna ApplicationArgs 0
+method "remove_support_from_prop()void"
+==
+bnz main_l21
+txna ApplicationArgs 0
+method "add_support_to_prop(uint64)void"
+==
+bnz main_l20
+txna ApplicationArgs 0
+method "add_funds()void"
+==
+bnz main_l19
+txna ApplicationArgs 0
+method "remove_funds(uint64)void"
+==
+bnz main_l18
+txna ApplicationArgs 0
+method "send_note(address,byte[])void"
+==
+bnz main_l17
+txna ApplicationArgs 0
+method "bring_online(byte[32],byte[32],byte[64],uint64,uint64,uint64)void"
+==
+bnz main_l16
+txna ApplicationArgs 0
+method "bring_offline()void"
+==
+bnz main_l15
+err
+main_l15:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+callsub bringoffline_13
+int 1
+return
+main_l16:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+store 19
+txna ApplicationArgs 2
+store 20
+txna ApplicationArgs 3
+store 21
+txna ApplicationArgs 4
+btoi
+store 22
+txna ApplicationArgs 5
+btoi
+store 23
+txna ApplicationArgs 6
+btoi
+store 24
+load 19
+load 20
+load 21
+load 22
+load 23
+load 24
+callsub bringonline_12
+int 1
+return
+main_l17:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+store 17
+txna ApplicationArgs 2
+store 18
+load 17
+load 18
+callsub sendnote_11
+int 1
+return
+main_l18:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+btoi
+store 16
+load 16
+callsub removefunds_10
+int 1
+return
+main_l19:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+callsub addfunds_9
+int 1
+return
+main_l20:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+btoi
+store 15
+load 15
+callsub addsupporttoprop_8
+int 1
+return
+main_l21:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+callsub removesupportfromprop_7
+int 1
+return
+main_l22:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+callsub updatepropglobalstate_6
+int 1
+return
+main_l23:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+callsub startsupportingprop_5
+int 1
+return
+main_l24:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+btoi
+store 14
+load 14
+callsub ratify_4
+int 1
+return
+main_l25:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+store 13
+load 13
+callsub proposalupdate_3
+int 1
+return
+main_l26:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+store 9
+load 9
+callsub newproposal_2
+store 10
+byte 0x151f7c75
+load 10
+itob
+concat
+log
+int 1
+return
+main_l27:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+==
+&&
+assert
+txna ApplicationArgs 1
+btoi
+store 4
+txna ApplicationArgs 2
+btoi
+store 5
+txna ApplicationArgs 3
+btoi
+store 6
+txna ApplicationArgs 4
+btoi
+store 7
+txna ApplicationArgs 5
+btoi
+store 8
+load 4
+load 5
+load 6
+load 7
+load 8
+callsub createapp_1
+int 1
+return
+main_l28:
+txn OnCompletion
+int OptIn
+==
+bnz main_l38
+txn OnCompletion
+int CloseOut
+==
+bnz main_l35
+txn OnCompletion
+int UpdateApplication
+==
+bnz main_l34
+txn OnCompletion
+int DeleteApplication
+==
+bnz main_l33
+err
+main_l33:
+int 0
+return
+main_l34:
+int 0
+return
+main_l35:
+txn ApplicationID
+int 0
+!=
+assert
+txn Sender
+byte "ecid"
+app_local_get
+byte "NSP"
+app_global_get_ex
+store 1
+store 0
+load 1
+assert
+txn Sender
+byte "ecid"
+app_local_get
+byte "Owner"
+app_global_get_ex
+store 3
+store 2
+load 3
+assert
+load 0
+int 0
+==
+bnz main_l37
+int 0
+return
+main_l37:
+itxn_begin
+int appl
+itxn_field TypeEnum
+txn Sender
+byte "ecid"
+app_local_get
+itxn_field ApplicationID
+int DeleteApplication
+itxn_field OnCompletion
+load 2
+itxn_field Accounts
+int 0
+itxn_field Fee
+itxn_submit
+int 1
+return
+main_l38:
+txn ApplicationID
+int 0
+!=
+assert
+txn Sender
+global CreatorAddress
+==
+bnz main_l40
+txn GroupIndex
+int 1
+-
+gtxns TypeEnum
+int pay
+==
+assert
+txn GroupIndex
+int 1
+-
+gtxns Receiver
+global CurrentApplicationAddress
+==
+assert
+txn GroupIndex
+int 1
+-
+gtxns Amount
+int 335500
+>=
+assert
+itxn_begin
+int appl
+itxn_field TypeEnum
+byte 0x8f81b1e3
+itxn_field ApplicationArgs
+txn Sender
+itxn_field ApplicationArgs
+byte base64(ByAHAAECIAZknKkLJgcCQVMDTlNQBU93bmVyAkNSAVMCTFICV1MxGyISQAGXNhoAgASPgbHjEkABdDYaAIAEWuugKhJAAVg2GgCABDtB0kASQAE0NhoAgARXMdFfEkABEDYaAIAEMFj7yxJAAOw2GgCABH3C0WASQADQNhoAgAR6d2TKEkAArDYaAIAEZg9UIxJAAJA2GgCABEG0504SQABmNhoAgAS1QSG6EkAAHTYaAIAEKO405RJAAAEAMRkiEjEYIhMQRIgD3SNDMRkiEjEYIhMQRDYaATUHNhoCNQg2GgM1CTYaBBc1CjYaBRc1CzYaBhc1DDQHNAg0CTQKNAs0DIgDWiNDMRkiEjEYIhMQRDYaATUFNhoCNQY0BTQGiAMKI0MxGSISMRgiExBEiAKVI0MxGSISMRgiExBENhoBFzUENASIAZ4jQzEZIhIxGCITEESIAYUjQzEZIhIxGCITEEQ2GgEXNQM0A4gBTCNDMRkiEjEYIhMQRDYaARc1AjQCiAEkI0MxGSISMRgiExBENhoBFzUBNAGIAMUjQzEZIhIxGCITEESIAIAjQzEZIhIxGCISEEQ2GgE1ADQAiABTI0MxGYEEEkAAGzEZgQUSQAABADEYIhNEMQAyCRJEKmSIAAQjQyJDNQ0yCmAiE0EADLEisgEjshA0DbIJs4k1FzUWsSKyASOyEDQWsgc0F7IIs4k1DjQOFSUSRCo0DmcoImcrImcpImcjQzYyAXIHNRA1DzEAMgkSRCkpZCMIZzQQRDQPMgkSRLEhBLIQNjIBshgjshkisgE2MgKyMrMjQzURNjIBcgc1EzUSMQAyCRJENBNENBIyCRJENBEoZA5AAAIiQygoZDQRCWexIQSyEDYyAbIYgAQ/DsHBsho0ERayGiKyAbMjQzUUMQAyCRJEKChkNBQIZyNDNRUxADIJEkQoZDQVD0AAAiJDKChkNBUJZypkNBWI/yUjQzEAMgkSRCsiZ4k1GDYyAXIHNRo1GTYyAoACQ1BlNSY1JTQmRDIKNjIBJwRjNRw1GzQcRDIKNjIBJwVjNR41HTQeRDIKNjIBJwZjNSA1HzQgRDYyAScFZTUiNSE0IkQ2MgEnBmU1JDUjNCREMQAyCRJENBpENBkyCRJEKChkNBsIZykpZCMJZzQbNCULIQUKNSc0GCMSQAA6NBgkEkAAKbEhBLIQNjIBshgkshkisgGzKChkIQYIZzQYJBJBACooKGQ0JwlnQgAgMgk0J4j+VEL/zSs0ITQdCTQbCzQfCCEFCzQjCmdC/7cjQzYyAXIHNSk1KDIKNjIBJwRjNSs1KjQrRDYyAYACRkllNS01LDQtRDEAMgkSRDQpRDQoMgkSRDQqNS6xIQSyEDYyAbIYJLIZIrIBszQsIhJAAAIiQygoZDQuCCEGCGcpKWQjCWcjQzUwNS80LxUlEkQ0MFcCABWB6AcORDEAMgkSRLEjshA0L7IHIrIIIrIBNDBXAgCyBbMjQzU2NTU1NDUzNTI1MTQxFSUSRDQyFSUSRDQzFYFAEkQxADIJEkSxJLIQNDGyCjQysgs0M7I/NDSyDDQ1sg00NrIOIrIBsyNDMQAyCRJEsSSyECKyAbMjQw==)
+itxn_field ApprovalProgram
+byte base64(B4EAQw==)
+itxn_field ClearStateProgram
+int 3
+itxn_field GlobalNumUint
+int 1
+itxn_field GlobalNumByteSlice
+int 0
+itxn_field LocalNumUint
+int 0
+itxn_field LocalNumByteSlice
+int 0
+itxn_field ExtraProgramPages
+int 0
+itxn_field Fee
+itxn_submit
+txn Sender
+byte "ecid"
+itxn CreatedApplicationID
+app_local_put
+int 1
+return
+main_l40:
+int 1
+return
+
+// payTo
+payTo_0:
+store 46
+store 45
+itxn_begin
+int 0
+itxn_field Fee
+int pay
+itxn_field TypeEnum
+load 45
+itxn_field Receiver
+load 46
+itxn_field Amount
+itxn_submit
+retsub
+
+// create_app
+createapp_1:
+store 29
+store 28
+store 27
+store 26
+store 25
+byte "CL"
+load 25
+app_global_put
+byte "FD"
+load 26
+app_global_put
+byte "LD"
+load 27
+app_global_put
+byte "CP"
+load 28
+app_global_put
+byte "PR"
+load 29
+app_global_put
+byte "AOITP"
+int 0
+app_global_put
+int 1
+return
+
+// new_proposal
+newproposal_2:
+store 11
+load 11
+len
+int 32
+==
+assert
+txn GroupIndex
+int 1
+-
+gtxns TypeEnum
+int pay
+==
+assert
+txn GroupIndex
+int 1
+-
+gtxns Receiver
+global CurrentApplicationAddress
+==
+assert
+txn GroupIndex
+int 1
+-
+gtxns Amount
+int 642000
+>=
+assert
+itxn_begin
+int appl
+itxn_field TypeEnum
+byte 0x29cb402e
+itxn_field ApplicationArgs
+txn Sender
+itxn_field ApplicationArgs
+load 11
+itxn_field ApplicationArgs
+byte "CL"
+app_global_get
+itob
+itxn_field ApplicationArgs
+byte "FD"
+app_global_get
+itob
+itxn_field ApplicationArgs
+byte base64(ByADAAEgJgsCV1MCTFIBUwJOUwJGSQJGUgJDTARNQUlEAkZEAVABSDEbIhJAAKU2GgCABCnLQC4SQABrNhoAgARn1MhREkAAQTYaAIAEQKZkKBJAACU2GgCABD8OwcESQAABADEZIhIxGCITEEQ2GgEXNQg0CIgCcyNDMRkiEjEYIhMQRIgCXyNDMRkiEjEYIhMQRDYaATUGNhoCNQc0BjQHiAIOI0MxGSISMRgiEhBENhoBNQI2GgI1AzYaAxc1BDYaBBc1BTQCNAM0BDQFiAGKI0MxGSMSQABiMRmBAhJAADAxGYEEEkAAJjEZgQUSQAABADEYIhNEMQAyCRInBGQjEhArZCISEEQyCYgBNiNDIkMxGCITRIgAZyISQAAIKytkIwlnI0MoKGQxAChiCWcqKmQxACpiCWdC/+MxGCITRCcHZIAFQU9JVFBlNQE1AIgALiISRDQBRDQAIxJEMQAoImYxACoiZjEAKSlkZjEAMgkTQAACI0MrK2QjCGdC//UnBGQjEkAAuScFZCMSQABBKChkMgYpZAkqZAsIZykyBmcxACgxAChiMgYxACliCTEAKmILCGYxACkyBmYoZCcGZA9AAAQiQgB5JwQjZyNCAHExACgxAChiKWQxACliCTEAKmILCGYxACkpZGYyBilkJwhkCA9AAAQiQgBGJwUiZygoZDIGKWQJKmQLCGcpMgZnMQAoMQAoYjIGMQApYgkxACpiCwhmMQApMgZmKGQnBmQPQAAEIkIACScEI2cjQgABI4k1CTIKYCITQQAMsSKyASOyEDQJsgmziTUNNQw1CzUKNjIBcgg1DzUONAoVJBJENAsVJBJEJwk0CmcnCjQLZycGNAxnJwg0DWcnBCJnJwUiZyoiZygiZykyBmcrImc0D0Q0DjEAEkQnBzYyAWcjQzURNRA0EBUkEkQ0ERUkEkSI/rwiEkQnBWQiEkQxADIJEkQnCWQ0EBJEJwUjZycKNBFnI0OI/phIiTUSiP6RIhJEKipkNBIIZzEAKjEAKmI0EghmI0M=)
+itxn_field ApprovalProgram
+byte base64(BzEbgQASQAABAIEBQw==)
+itxn_field ClearStateProgram
+int 9
+itxn_field GlobalNumUint
+int 2
+itxn_field GlobalNumByteSlice
+int 3
+itxn_field LocalNumUint
+int 0
+itxn_field LocalNumByteSlice
+int 0
+itxn_field Fee
+global CurrentApplicationID
+itxn_field Applications
+itxn_submit
+itxn CreatedApplicationID
+store 12
+byte "AOITP"
+int 1
+app_global_put
+itxn_begin
+int appl
+itxn_field TypeEnum
+itxn CreatedApplicationID
+itxn_field ApplicationID
+int OptIn
+itxn_field OnCompletion
+int 0
+itxn_field Fee
+global CurrentApplicationID
+itxn_field Applications
+itxn_submit
+byte "AOITP"
+int 0
+app_global_put
+load 12
+retsub
+
+// proposal_update
+proposalupdate_3:
+store 30
+load 30
+len
+int 32
+==
+assert
+itxn_begin
+int appl
+itxn_field TypeEnum
+txna Applications 1
+itxn_field ApplicationID
+method "proposal_update(address,byte[32])void"
+itxn_field ApplicationArgs
+txn Sender
+itxn_field ApplicationArgs
+load 30
+itxn_field ApplicationArgs
+int 0
+itxn_field Fee
+itxn_submit
+int 1
+return
+
+// ratify
+ratify_4:
+store 31
+txna Applications 1
+app_params_get AppCreator
+store 33
+store 32
+txna Applications 2
+byte "Owner"
+app_global_get_ex
+store 41
+store 40
+load 41
+assert
+txna Applications 2
+byte "CR"
+app_global_get_ex
+store 43
+store 42
+load 43
+assert
+txna Applications 1
+byte "FI"
+app_global_get_ex
+store 35
+store 34
+load 35
+assert
+txna Applications 1
+byte "NS"
+app_global_get_ex
+store 37
+store 36
+load 37
+assert
+txna Applications 1
+byte "LR"
+app_global_get_ex
+store 39
+store 38
+load 39
+assert
+load 33
+assert
+load 32
+global CurrentApplicationAddress
+==
+assert
+txn Sender
+global CreatorAddress
+==
+assert
+load 34
+int 1
+==
+bnz ratify_4_l2
+int 0
+return
+ratify_4_l2:
+load 36
+int 0
+!=
+bnz ratify_4_l4
+itxn_begin
+int appl
+itxn_field TypeEnum
+txna Applications 1
+itxn_field ApplicationID
+int DeleteApplication
+itxn_field OnCompletion
+int 0
+itxn_field Fee
+itxn_submit
+int 1
+return
+ratify_4_l4:
+itxn_begin
+int appl
+itxn_field TypeEnum
+txna Applications 2
+itxn_field ApplicationID
+method "release_ratify(uint64)void"
+itxn_field ApplicationArgs
+load 31
+itob
+itxn_field ApplicationArgs
+int 0
+itxn_field Fee
+txna Applications 1
+itxn_field Applications
+global CurrentApplicationID
+itxn_field Applications
+itxn_submit
+load 31
+int 1
+==
+bnz ratify_4_l6
+ratify_4_l5:
+int 1
+return
+ratify_4_l6:
+global Round
+load 38
+byte "LD"
+app_global_get
++
+>=
+assert
+txna Applications 2
+byte "CR"
+app_global_get_ex
+store 43
+store 42
+load 43
+assert
+load 42
+byte "PR"
+app_global_get
+*
+int 100
+/
+store 44
+load 40
+balance
+global MinBalance
+>=
+bnz ratify_4_l9
+global CreatorAddress
+load 44
+callsub payTo_0
+ratify_4_l8:
+itxn_begin
+int appl
+itxn_field TypeEnum
+txna Applications 2
+itxn_field ApplicationID
+method "accept_reward()void"
+itxn_field ApplicationArgs
+int 0
+itxn_field Fee
+itxn_submit
+b ratify_4_l5
+ratify_4_l9:
+load 40
+load 44
+callsub payTo_0
+b ratify_4_l8
+
+// start_supporting_prop
+startsupportingprop_5:
+txna Applications 1
+app_params_get AppCreator
+store 48
+store 47
+load 48
+assert
+load 47
+global CurrentApplicationAddress
+==
+assert
+txn Sender
+byte "ecid"
+app_local_get
+app_params_get AppAddress
+store 50
+store 49
+load 50
+assert
+txn GroupIndex
+int 1
+-
+gtxns TypeEnum
+int pay
+==
+assert
+txn GroupIndex
+int 1
+-
+gtxns Receiver
+load 49
+==
+assert
+txn GroupIndex
+int 1
+-
+gtxns Amount
+int 185500
+>=
+assert
+byte "AOITP"
+int 1
+app_global_put
+itxn_begin
+int appl
+itxn_field TypeEnum
+txn Sender
+byte "ecid"
+app_local_get
+itxn_field ApplicationID
+method "start_supporting_prop()void"
+itxn_field ApplicationArgs
+int 0
+itxn_field Fee
+txna Applications 1
+itxn_field Applications
+global CurrentApplicationID
+itxn_field Applications
+itxn_submit
+byte "AOITP"
+int 0
+app_global_put
+int 1
+return
+
+// update_prop_global_state
+updatepropglobalstate_6:
+txna Applications 1
+app_params_get AppCreator
+store 52
+store 51
+load 52
+assert
+load 51
+global CurrentApplicationAddress
+==
+assert
+itxn_begin
+int appl
+itxn_field TypeEnum
+txna Applications 1
+itxn_field ApplicationID
+method "update_state()void"
+itxn_field ApplicationArgs
+int 0
+itxn_field Fee
+itxn_submit
+int 1
+return
+
+// remove_support_from_prop
+removesupportfromprop_7:
+txna Applications 1
+byte "FI"
+app_global_get_ex
+store 56
+store 55
+load 56
+assert
+txna Applications 1
+app_params_get AppCreator
+store 54
+store 53
+load 54
+assert
+load 53
+global CurrentApplicationAddress
+==
+assert
+load 55
+int 0
+==
+assert
+itxn_begin
+int appl
+itxn_field TypeEnum
+txn Sender
+byte "ecid"
+app_local_get
+itxn_field ApplicationID
+method "release_from_proposal()void"
+itxn_field ApplicationArgs
+int 0
+itxn_field Fee
+txna Applications 1
+itxn_field Applications
+itxn_submit
+int 1
+return
+
+// add_support_to_prop
+addsupporttoprop_8:
+store 57
+txna Applications 1
+app_params_get AppCreator
+store 59
+store 58
+load 59
+assert
+load 58
+global CurrentApplicationAddress
+==
+assert
+itxn_begin
+int appl
+itxn_field TypeEnum
+txn Sender
+byte "ecid"
+app_local_get
+itxn_field ApplicationID
+method "add_support(uint64)void"
+itxn_field ApplicationArgs
+load 57
+itob
+itxn_field ApplicationArgs
+int 0
+itxn_field Fee
+txna Applications 1
+itxn_field Applications
+itxn_submit
+int 1
+return
+
+// add_funds
+addfunds_9:
+txn Sender
+byte "ecid"
+app_local_get
+app_params_get AppAddress
+store 61
+store 60
+load 61
+assert
+txn GroupIndex
+int 1
+-
+gtxns TypeEnum
+int pay
+==
+assert
+txn GroupIndex
+int 1
+-
+gtxns Receiver
+load 60
+==
+assert
+itxn_begin
+int appl
+itxn_field TypeEnum
+txn Sender
+byte "ecid"
+app_local_get
+itxn_field ApplicationID
+method "add_funds(uint64)void"
+itxn_field ApplicationArgs
+txn GroupIndex
+int 1
+-
+gtxns Amount
+itob
+itxn_field ApplicationArgs
+int 0
+itxn_field Fee
+itxn_submit
+int 1
+return
+
+// remove_funds
+removefunds_10:
+store 62
+txn Sender
+byte "ecid"
+app_local_get
+app_params_get AppAddress
+store 64
+store 63
+load 64
+assert
+itxn_begin
+int appl
+itxn_field TypeEnum
+txn Sender
+byte "ecid"
+app_local_get
+itxn_field ApplicationID
+method "remove_funds(uint64)void"
+itxn_field ApplicationArgs
+load 62
+itob
+itxn_field ApplicationArgs
+int 0
+itxn_field Fee
+txn Sender
+itxn_field Accounts
+itxn_submit
+int 1
+return
+
+// send_note
+sendnote_11:
+store 66
+store 65
+txn Sender
+byte "ecid"
+app_local_get
+app_params_get AppAddress
+store 68
+store 67
+load 68
+assert
+load 65
+len
+int 32
+==
+assert
+load 66
+extract 2 0
+len
+int 1000
+<=
+assert
+itxn_begin
+int appl
+itxn_field TypeEnum
+txn Sender
+byte "ecid"
+app_local_get
+itxn_field ApplicationID
+method "send_note(address,byte[])void"
+itxn_field ApplicationArgs
+load 65
+itxn_field ApplicationArgs
+load 66
+extract 2 0
+itxn_field ApplicationArgs
+int 0
+itxn_field Fee
+load 65
+itxn_field Accounts
+itxn_submit
+int 1
+return
+
+// bring_online
+bringonline_12:
+store 74
+store 73
+store 72
+store 71
+store 70
+store 69
+txn Sender
+byte "ecid"
+app_local_get
+app_params_get AppAddress
+store 76
+store 75
+load 76
+assert
+load 69
+len
+int 32
+==
+assert
+load 70
+len
+int 32
+==
+assert
+load 71
+len
+int 64
+==
+assert
+itxn_begin
+int appl
+itxn_field TypeEnum
+txn Sender
+byte "ecid"
+app_local_get
+itxn_field ApplicationID
+method "bring_online(byte[32],byte[32],byte[64],uint64,uint64,uint64)void"
+itxn_field ApplicationArgs
+load 69
+itxn_field ApplicationArgs
+load 70
+itxn_field ApplicationArgs
+load 71
+itxn_field ApplicationArgs
+load 72
+itob
+itxn_field ApplicationArgs
+load 73
+itob
+itxn_field ApplicationArgs
+load 74
+itob
+itxn_field ApplicationArgs
+int 0
+itxn_field Fee
+itxn_submit
+int 1
+return
+
+// bring_offline
+bringoffline_13:
+txn Sender
+byte "ecid"
+app_local_get
+app_params_get AppAddress
+store 78
+store 77
+load 78
+assert
+itxn_begin
+int appl
+itxn_field TypeEnum
+txn Sender
+byte "ecid"
+app_local_get
+itxn_field ApplicationID
+method "bring_offline()void"
+itxn_field ApplicationArgs
+int 0
+itxn_field Fee
+itxn_submit
+int 1
+return
